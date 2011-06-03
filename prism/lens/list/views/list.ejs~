@@ -1,5 +1,0 @@
-<ol class='sparks prism lens list'>
-  <%for(var i = 0; i < list.length ; i++){%>
-    <%= $.View('//sparks/prism/lens/list/views/show', list[i]) %>
-  <%}%>
-</ol>
