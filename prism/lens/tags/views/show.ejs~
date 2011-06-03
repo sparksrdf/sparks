@@ -1,0 +1,3 @@
+<li class='sparks prism lens tags item filtered'>
+  <span class='sparks prism lens tags item label'><%=this.label%></span> <span class='sparks prism lens tags item weight'>(<%=this.weight%>)</span>
+</li>

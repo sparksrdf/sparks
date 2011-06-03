@@ -1,0 +1,8 @@
+<li class='sparks prism lens list item'>
+  <%  if (typeof this !== "undefined") { %>
+    <span class='sparks prism lens list item title'><%=this.title.value.replace(/_/g," ")%></span>
+    <%  if (typeof this.topic !== "undefined") { %>
+      <span class='sparks prism lens list item topic'><%=this.topic.value%></span>
+    <% } 
+  }%>
+</li>

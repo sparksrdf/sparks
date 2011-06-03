@@ -1,0 +1,5 @@
+<ul class='sparks prism lens tags'>
+  <%for(var i in flatTags){%>
+    <%= $.View('//sparks/prism/lens/tags/views/show', {label: i ,weight:flatTags[i]}) %>
+  <%}%>
+</ul>

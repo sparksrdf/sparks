@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+	<title>Prism Demo</title>
+        <style type='text/css'>
+            body {font-family: verdana}
+            .error {border: solid 1px red;}
+            .error_text { color: red; font-size: 10px;}
+            td {padding: 3px;}
+
+	     #tags { float: right; width: 300px;}
+	     #tags > span {text-decoration: underline;}
+	    .sparks.prism.lens.tags{ cursor: pointer;}
+	    .sparks.prism.lens.list.item.topic { font-style: oblique; color: #aaa;}
+
+	    #search { padding-left: 1.5em;}
+	    
+        </style>
+	</head>
+	<body>
+	    <h1>Prism POIs Example Demo</h1>
+	    <div id="search">
+		<form action="">
+		      Filter Search Query*: <input name="search[query]" type="text" /><input type="submit" value="Search" />
+		</form>
+		<span style="color: #aaa; font-size: 75%;">* The blank field bug is fixed in JavaScriptMVC trunk.<span>
+	    </div>
+
+	    <div id="tags">
+	      <span>Tags:</span>
+	      <div id="tags-list">
+	      </div>
+	    </div>
+
+	    <div id="list">
+	    </div>
+
+		<script type='text/javascript' 
+                src='../../steal/steal.js?sparks/prism,development'>   
+        </script>
+	</body>
+
+	<script>
+		    var prism = new Sparks.Prism("http://n/sparql","?root a <http://ext.dcs.shef.ac.uk/~u0080/linkedPOI/core#POI>");
+
+		    $('#tags-list').sparks_prism_lens_tags({prism: prism});
+		    $('#search').sparks_prism_lens_search({prism: prism});
+		    $('#list').sparks_prism_lens_list({prism: prism});
+	</script>
+</html>
